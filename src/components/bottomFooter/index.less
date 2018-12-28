@@ -1,0 +1,29 @@
+.bottom-footer {
+  height: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  .bottom-controller {
+    color: @backgroud-color-second;
+    cursor: pointer;
+    .control{
+      &.ward {
+        color: @color;
+      }
+      &.backward, &.farward {
+        padding: 5px;
+        background: @backgroud-color-second;
+        border-radius: 100%;
+      }
+      &:hover {
+        color: @primary-color;
+        &.backward, &.farward {
+          background: @primary-color;
+        }
+      }
+      &.ward:hover {
+        color: @color;
+      }
+    }
+    
+  }
+}

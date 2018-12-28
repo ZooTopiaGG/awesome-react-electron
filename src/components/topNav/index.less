@@ -1,0 +1,41 @@
+.top-nav {
+  .header-logo {
+    width: 20%;
+    min-width: 100px;
+    max-width: 260px;
+  }
+  .google-icon {
+    margin-right: 5px;
+  }
+  .header-search {
+    .ant-input-search {
+      .ant-input{
+        background-color: transparent;
+        color:  @text-color-third;
+        .ant-input-search-icon {
+          color: @text-color-third;
+          &:hover {
+            color: @color;
+          }
+        }
+      }
+    }
+    
+  }
+  .header-info {
+    .info-login {
+      width: 100px;
+      color: @text-color-third;
+    }
+    .info-link {
+      width: 100px;
+      font-size: @font-size-base + 2;
+      color: @text-color-third;
+    }
+  }
+  .info-hover {
+    &:hover {
+      color: @color;
+    }
+  }
+}

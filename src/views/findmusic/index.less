@@ -1,0 +1,102 @@
+.find-music {
+  height: 100%;
+  .find-nav {
+    text-align: center;
+  }
+  .find-music-box {
+    width: 800px;
+    margin: 0 auto;
+  }
+  .recommend {
+    width: 100%;
+    padding: 20px 0;
+    .slider-box {
+      position: relative;
+      width: 80%;
+      height: 235px;
+      margin: 0 auto;
+      color: @primary-color;
+      .slider-item {
+        position: absolute;
+        transition: all 0.3s ease-in-out;
+        user-select: none; // 禁止用户选中(防止图片被选中时变色);
+        &:hover{ // 鼠标经过时显示小手样式
+          cursor: pointer;
+        }
+        > span{
+          position: absolute;
+          right: 20px;
+          bottom: 20px;
+        }
+        > img {
+          width: 100%;
+        }
+        .masking {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0,0,0,.25);
+          transition: all 0.3s 0.2s linear;
+          z-index: 1;
+        }
+        &.slider-middle {
+          left: 10%;
+          bottom: 0%;
+          width: 80%;
+          z-index: 33;
+          .masking {
+            background: transparent;
+          }
+        }
+        &.slider-start {
+          left: 0%;
+          bottom: 0%;
+          width: 74%;
+          z-index: 22;
+        }
+        &.slider-end {
+          right: 0%;
+          bottom: 0%;
+          width: 74%;
+          z-index: 22;
+        }
+        &.slider-normal {
+          left: 13%;
+          bottom: 0%;
+          width: 73%;
+          z-index: 11;
+        }
+      }
+    }
+    .slider-bots {
+      position: relative;
+      display: block;
+      &.slider-bots-hide {
+        display: none;
+      }
+      .slider-point{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: -23px;
+        z-index: 999;
+        text-align: center;
+        span{
+          display: inline-block;
+          width: 20px;
+          height: 3px;
+          background-color: @backgroud-color-third;
+          margin-left: 9px;
+          &.point-hover{
+            background-color: @primary-color;
+          }
+          &:hover{
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

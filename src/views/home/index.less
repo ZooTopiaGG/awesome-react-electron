@@ -1,0 +1,79 @@
+.home {
+  height: 100%;
+  .content {
+    height: 100%;
+  }
+  .ant-layout {
+    height: 100%;
+    .ant-layout-header {
+      background-color: @primary-color;
+      padding: 0 20px;
+      height: 8vh;
+      line-height: 8vh;
+    }
+    .ant-layout-has-sider {
+      .ant-layout-sider {
+        background-color: @backgroud-color;
+        color: @text-color;
+        border-right: 1px solid @backgroud-color-third;
+        height: @client-height - 16vh;
+        .ant-layout-sider-children {
+          .ant-menu {
+            background-color: @backgroud-color;
+            .ant-menu-item{
+              &:hover {
+                color: @text-color-hover;
+              }
+              &:active {
+                background-color: @backgroud-color-third;
+              }
+              &.ant-menu-item-selected{
+                background-color: @backgroud-color-third;
+                color: @text-color-hover;
+              }
+              &::after {
+                left: 0;
+                right: auto;
+                border-right: 3px solid @primary-color;
+              }
+            }
+            .ant-menu-submenu-inline{
+
+              .ant-menu-submenu-active {
+                color: @text-color-secondary;
+              }
+              .ant-menu-submenu-title {
+                color: @text-color;
+                &:hover {
+                  background-color: @backgroud-color-third;
+                  color: @text-color-hover;
+                  .ant-menu-submenu-arrow::before {
+                    background: linear-gradient(to right, @text-color-hover, @text-color-hover);
+                  }
+                  .ant-menu-submenu-arrow::after {
+                    background: linear-gradient(to right, @text-color-hover, @text-color-hover);
+                  }
+                }
+                &:active {
+                  background-color: @backgroud-color-third;
+                }
+              }
+              
+            }
+          }
+        }
+      }
+      .ant-layout-content {
+        background-color: @backgroud-color-four;
+        color: @text-color;
+      }
+    }
+    
+    .ant-layout-footer {
+      border-top: 1px solid @backgroud-color-third;
+      background-color: @backgroud-color-five;
+      padding: 0;
+      height: 8vh;
+    }
+  }
+}
